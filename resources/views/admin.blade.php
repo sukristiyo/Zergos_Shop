@@ -18,7 +18,10 @@
         
         <form action="{{route('cari-data')}}" method="post">
             @csrf
-          <input type="text" style="width: 300px;" name="cari" class="form-control mx-3"> <button type="submit" class="btn btn-primary">Cari</button>
+                <input type="text" name="cari" class="form-control bg-light border-0 small ml-3" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                  <button class="btn btn-primary mr-3" type="submit">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
         <a href="{{route('home')}}" class="btn btn-primary"> Refresh</a>
         </form>
         </div>
