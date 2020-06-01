@@ -1,0 +1,36 @@
+body{font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; margin: 0; padding: 0;}
+.atas{
+    border: 2px solid black;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+    margin: 5px 0 0 0;
+    height: 90%;
+    width:35%;
+    background: #9abaed;
+}
+.atas h6{color: #9abaed;}
+.atas h1{
+    margin-top: 26px;
+    /* background-color: chartreuse; */
+    color: green;
+}
+.atas .isi{
+    
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin: 108px 0 0 0;
+    height: 21.5%;
+    width:100%;
+    background: #5f87c7;
+}
+.atas .isi h4{
+    
+    color: #b4ff96;
+    background-color: #5f87c7;
+}
+/* .atas .atmosfir{background-color: #1a5a7d;margin-left: 3px;margin-right: 3px; padding-top: 0px; padding-bottom: 30px; color: #fff;}
+.atas .atmosfir article{padding: 0px 400px 0 30px; background: url(../images/bca.png) no-repeat 0 5px; min-height: 100px;}
+.atas .atmosfir article{margin-left: 10px; padding-left: 160px;background-size:150px auto ;} */
