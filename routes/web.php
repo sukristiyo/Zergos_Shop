@@ -17,6 +17,11 @@ Auth::routes();
 
 //Home 
 Route::get('/', 'HomeController@index')->name('homepage');
+//beli
+Route::get('/beli/{id}', 'HomeController@beli')->name('beli');
+//input-beli
+Route::post('/beli/input/', 'HomeController@store')->name('input-beli');
+
 
 Route::group(['middleware' => ['auth']], function () {
     // Home admin

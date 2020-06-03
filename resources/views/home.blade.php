@@ -108,78 +108,21 @@
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 special-grid drinks">
+                        @foreach ($ikan as $i)   
+                        <div class="col-lg-4 col-md-6 special-grid drinks"> 
                             <div class="gallery-single fix">
-                                <img src="{{url('/assets/images/tuna1.jpg')}}" class="img-fluid" alt="Image">
+                                <img src="{{url('/storage/uploads').'/'.$i->gambar}}" class="img-fluid" alt="Image">
                                 <div class="why-text">
-                                    <h4>Tuna</h4>
-                                    <p>Fresh Tuna Everyday From Our Sea Pond.</p>
-                                    <h5> IDR 120.000/Kg</h5>
-                                    <a href="Payment.html" class="btn-lg btn-success">Beli</a>
+                                    <h4>{{$i->nama}}</h4>
+                                    <p>{{$i->deskripsi}}</p>
+                                    <h5> IDR {{$i->harga}}</h5>
+                                <a href="{{route('beli',encrypt($i->id_ikan))}}" class="btn-lg btn-success">Beli</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6 special-grid drinks">
-                            <div class="gallery-single fix">
-                                <img src="{{url('/assets/images/cakalang.jpg')}}" class="img-fluid" alt="Image">
-                                <div class="why-text">
-                                    <h4>Cakalang</h4>
-                                    <p>Fresh Cakalang Everyday From Our Sea Pond.</p>
-                                    <h5> IDR 80.000/Kg</h5>
-                                    <a href="Payment.html" class="btn-lg btn-success">Beli</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 special-grid drinks">
-                            <div class="gallery-single fix">
-                                <img src="{{url('/assets/images/kakap.jpg')}}" class="img-fluid" alt="Image">
-                                <div class="why-text">
-                                    <h4>Kakap</h4>
-                                    <p>Fresh Kakap Everyday From Our Sea Pond.</p>
-                                    <h5> IDR 90.000/Kg</h5>
-                                    <a href="Payment.html" class="btn-lg btn-success">Beli</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 special-grid lunch">
-                            <div class="gallery-single fix">
-                                <img src="{{url('/assets/images/lobster.jpg')}}" class="img-fluid" alt="Image">
-                                <div class="why-text">
-                                    <h4>Lobster</h4>
-                                    <p>Fresh Lobster Everyday From Our Sea Pond.</p>
-                                    <h5> IDR 100.000/Kg</h5>
-                                    <a href="Payment.html" class="btn-lg btn-success">Beli</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 special-grid lunch">
-                            <div class="gallery-single fix">
-                                <img src="{{url('/assets/images/kepiting.jpg')}}" class="img-fluid" alt="Image">
-                                <div class="why-text">
-                                    <h4>Kepiting</h4>
-                                    <p>Fresh Kepiting Everyday From Our Sea Pond.</p>
-                                    <h5> IDR 400.000/Kg</h5>
-                                    <a href="Payment.html" class="btn-lg btn-success">Beli</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 special-grid lunch">
-                            <div class="gallery-single fix">
-                                <img src="{{url('/assets/images/kerang.jpg')}}" class="img-fluid" alt="Image">
-                                <div class="why-text">
-                                    <h4>Kerang</h4>
-                                    <p>Fresh Kerang Everyday From Our Sea Pond..</p>
-                                    <h5> IDR 35.000/Kg</h5>
-                                    <a href="Payment.html" class="btn-lg btn-success">Beli</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
+                    <div class="row justify-content-center my-2">{{$ikan->links()}}</div>
                 </div>
             </div>
         </div>
