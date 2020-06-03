@@ -46,7 +46,7 @@
                 <td>{{$i->nama}}</td>
                 <td>Rp.{{$i->harga}}</td>
                 <td>{{$i->stok}}</td>
-                <td></td>
+              <td><img class="img-thumbnail" style="width:100px; height:100px;" src="{{url('storage/uploads').'/'.$i->gambar}}" alt=""></td>
                 <td>
                     <a href="{{route('edit-data',encrypt($i->id_ikan))}}" class="badge badge-success">Edit</a>
                     <a href="{{route('hapus-data',encrypt($i->id_ikan))}}" class="badge badge-danger">Hapus</a>
@@ -55,7 +55,8 @@
               @endforeach
             </tbody>
           </table>
-    </div>
+         <div class="row justify-content-center">{{$ikan->links()}}</div> 
+        </div>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
