@@ -131,9 +131,15 @@ class AdminController extends Controller
         return redirect(route('home'))->with(['success' => 'Data Berhasil Di Hapus!']);
     }
 
-    public function pemesanan()
+    public function pemesanan(Request $request)
     {
-        $pemesanan = DB::table('pemesanan')->paginate(6);
+        if ($request->input('cari-pesanan')) {
+            $pemesanan = DB::table('pemesanan')
+                ->where('nama', 'like', '%' . $request->input('cari') . '%')
+                ->paginate(6);
+        } else {
+            $pemesanan = DB::table('pemesanan')->paginate(6);
+        }
         return view('pemesanan', ['pemesanan' => $pemesanan]);
     }
 }

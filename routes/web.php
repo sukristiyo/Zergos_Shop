@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 //Home 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('homepage');
 
 Route::group(['middleware' => ['auth']], function () {
     // Home admin
@@ -27,11 +27,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Administrator/hapus/{id}', 'AdminController@destroy')->name('hapus-data');
     // Redirect Data
     Route::get('/Administrator/edit/{id}', 'AdminController@edit')->name('edit-data');
-    // Cari Data
+    // Cari Data Ikan
     Route::post('/Administrator/cari', 'AdminController@index')->name('cari-data');
     // Edit Data
     Route::post('/Administrator/update', 'AdminController@update')->name('update-data');
 
-    //Data Penjualan
+    //Data Pemesanan
     Route::get('/Administrator/pemesanan', 'AdminController@pemesanan')->name('data-pemesanan');
+    // Cari Data Pemesanan
+    Route::post('/Administrator/cari-pesanan', 'AdminController@pemesanan')->name('cari-pemesanan');
 });

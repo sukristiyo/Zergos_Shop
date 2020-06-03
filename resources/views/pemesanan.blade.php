@@ -13,7 +13,7 @@
 
         <div class="form-group form-inline">
         
-        <form action="{{route('cari-data')}}" method="post">
+        <form action="{{route('cari-pemesanan')}}" method="post">
             @csrf
                 <input type="text" name="cari" class="form-control bg-light border-0 small ml-3" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                   <button class="btn btn-primary mr-3" type="submit">
@@ -44,7 +44,7 @@
                 <td>Rp.{{$i->harga}}</td>
                 <td>{{$i->jumlah}}</td>
               <td>{{$i->nohp}}</td>
-              <td>{{$i->alamat}}</td>
+              <td>{{$i->alamat}}</td> 
               </tr>
               @endforeach
             </tbody>

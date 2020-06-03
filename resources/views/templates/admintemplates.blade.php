@@ -33,7 +33,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin Ikan</div>
       </a>
 
       <!-- Divider -->
@@ -79,7 +79,7 @@
       
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="{{route('home')}}">
           <i class="fas fa-fw fa-table"></i>
           <span>Data Ikan</span></a>
         </li>
